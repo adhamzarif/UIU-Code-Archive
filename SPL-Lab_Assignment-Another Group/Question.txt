@@ -1,1 +1,5 @@
-
+You start from the Oth floor and you want to reach nth floor. Every time you
+reach a floor, you print "I've reached the xth floor". Print everything on a
+file named "output.txt". Take the input from "input.txt". Complete this using
+recursion. Input: 4 Output: I've reached 1th floor I've reached 2nd floor
+I've reached 3rd floor I've reached 4thfloor

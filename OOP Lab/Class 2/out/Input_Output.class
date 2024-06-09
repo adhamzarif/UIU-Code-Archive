@@ -1,0 +1,13 @@
+Êþº¾   B 3
+       java/lang/Object <init> ()V   java/util/Scanner	 
+ 
+   
+  java/lang/System in Ljava/io/InputStream;
+      (Ljava/io/InputStream;)V	 
+    out Ljava/io/PrintStream;  Please Enter Your Name: 
+       java/io/PrintStream  println (Ljava/lang/String;)V
+      ! nextLine ()Ljava/lang/String;  # Input_Output Code LineNumberTable LocalVariableTable this LInput_Output; main ([Ljava/lang/String;)V args [Ljava/lang/String; sc Ljava/util/Scanner; s Ljava/lang/String; 
+SourceFile Input_Output.java ! "           $   /     *· ±    %        &        ' (   	 ) *  $   n      »  Y² 	· L² ¶ +¶ M² ,¶ ±    %        
+     	  
+ &          + ,   
+  - .    / 0   1    2

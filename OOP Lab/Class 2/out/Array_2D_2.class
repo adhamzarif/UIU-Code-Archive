@@ -1,0 +1,37 @@
+Êþº¾   B T
+       java/lang/Object <init> ()V   [I  
+ java/util/Scanner	  
+     java/lang/System in Ljava/io/InputStream;
+ 	    (Ljava/io/InputStream;)V
+ 	     nextInt ()I
+ 	    close	     out Ljava/io/PrintStream;     ! " makeConcatWithConstants (I)Ljava/lang/String;
+ $ %  & ' ( java/io/PrintStream print (Ljava/lang/String;)V
+ $ * +   println  - 
+Array_2D_2 Code LineNumberTable LocalVariableTable this LArray_2D_2; main ([Ljava/lang/String;)V v I i j args [Ljava/lang/String; arr [[I arr2 sc Ljava/util/Scanner; 
+StackMapTable  :  < 
+SourceFile Array_2D_2.java BootstrapMethods G   I
+ J K  L ! M $java/lang/invoke/StringConcatFactory ˜(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; InnerClasses  P %java/lang/invoke/MethodHandles$Lookup  R java/lang/invoke/MethodHandles Lookup ! ,           .   /     *· ±    /        0        1 2   	 3 4  .  w     ½  Y¼
+YOYOSY¼
+Y OYOYOSY ¼
+Y OYOY	OY
+OSL½  M,¼
+S,¼
+S, ¼
+S» 	Y² 
+· N6¢ -¶ 6,2O„§ÿé6¢ -¶ 6,2O„§ÿé6 ¢ -¶ 6,2O„§ÿé-¶ ,:¾66¢ C2:  :¾6	6
+
+	¢ 
+.6
+² 
+º   ¶ #„
+§ÿâ² ¶ )„§ÿ¼±    /   j     @   E  K 	 Q 
+ W 
+ b 
+ k  q  y 
+   ˆ  Ž  –  œ  ¥  «  ³  ¹  ½  Ö  ð   ý  "	  $ 0   z  q  5 6  e  7 6  Ž  5 6  ‚  7 6  «  5 6  Ÿ  7 6  ð 
+ 8 6 
+ Ö 3 7      9 :   @ Ð ; <  E Ë = <  b ® > ?  @   e 
+ÿ e   A  B  B  	  ú ü ú ü ú þ   Bÿ  
+  A  B  B  	  B        ø  ÿ 
+   A  B  B  	    C    D E     H  F N   
+  O Q S 

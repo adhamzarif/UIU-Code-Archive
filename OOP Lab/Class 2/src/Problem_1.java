@@ -37,3 +37,35 @@ public class Problem_1 {
         System.out.println("Sum = " + sum);
     }
 }
+
+
+// import java.util.Scanner;
+
+// //	  1 2 3
+// //        4 5 6
+// //        7 8 9
+
+// //sum = 1 + 5 + 9 + 3 + 7
+
+// public class Lab2 {
+//     public static void main(String[] args) {
+//         int sum = 0;
+// //       int[][] arr = new int[][]{{1,1,2,3},{4,2,5,6},{7, 3,8,9},{1,2,3,4}};
+
+//         int[][] arr = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
+//        int n = arr.length;
+//             for(int i=0;i<n;i++){
+//                 if(i == (n-i-1))
+//                     sum += arr[i][i];
+//                 else {
+//                     sum += arr[i][i];
+//                     sum += arr[i][n - i - 1];
+//                 }
+//             }
+//         System.out.println(sum);
+//     }
+// }
+// //1 1 2 3
+// //4 2 5 6
+// //7 3 8 9
+// //1 2 3 4

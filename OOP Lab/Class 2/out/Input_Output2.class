@@ -1,0 +1,18 @@
+Êþº¾   B L
+       java/lang/Object <init> ()V   java/util/Scanner	 
+ 
+   
+  java/lang/System in Ljava/io/InputStream;
+      (Ljava/io/InputStream;)V	 
+    out Ljava/io/PrintStream;  Please Enter Your ID & Name: 
+       java/io/PrintStream  println (Ljava/lang/String;)V
+      !  nextInt ()I
+   # $ % nextLine ()Ljava/lang/String;   ' ( ) makeConcatWithConstants '(ILjava/lang/String;)Ljava/lang/String;  + 
+Input_Output2 Code LineNumberTable LocalVariableTable this LInput_Output2; main ([Ljava/lang/String;)V args [Ljava/lang/String; sc Ljava/util/Scanner; id I s Ljava/lang/String; 
+SourceFile Input_Output2.java BootstrapMethods ?  A
+ B C  D ( E $java/lang/invoke/StringConcatFactory ˜(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; InnerClasses  H %java/lang/invoke/MethodHandles$Lookup  J java/lang/invoke/MethodHandles Lookup ! *           ,   /     *· ±    -        .        / 0   	 1 2  ,        0»  Y² 	· L² ¶ +¶ =+¶ "W+¶ "N² -º &  ¶ ±    -         
+        
+ " 
+ /  .   *    0 3 4   
+ % 5 6    7 8  "  9 :   ;    < =     @  > F   
+  G I K 

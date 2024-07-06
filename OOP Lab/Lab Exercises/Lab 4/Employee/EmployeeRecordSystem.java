@@ -1,127 +1,151 @@
 package Lab4;
 
-public class Employee {
-    private String name;
-    private String id;
-    private String type;  // "Salaried", "Hourly", "Commission", "BasePlusCommission"
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-    private double annualSalary;  // for Salaried
-    private double hourlyRate;    // for Hourly
-    private double hoursWorked;   // for Hourly
-    private double sales;         // for Commission and BasePlusCommission
-    private double commissionRate;// for Commission and BasePlusCommission
-    private double baseSalary;    // for BasePlusCommission
+public class EmployeeRecordSystem {
+    private List<Employee> employees;
+    private Scanner scanner;
 
-    public Employee(String name, String id, String type) {
-        this.name = name;
-        this.id = id;
-        this.type = type;
+    public EmployeeRecordSystem() {
+        this.employees = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
     }
 
-    public String getName() {
-        return name;
+    public void run() {
+        boolean running = true;
+
+        while (running) {
+            System.out.println("Employee Record System");
+            System.out.println("1. Add Employee");
+            System.out.println("2. View Employee");
+            System.out.println("3. Update Employee");
+            System.out.println("4. Calculate Salary");
+            System.out.println("5. Exit");
+            System.out.print("Choose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();  // Consume newline
+
+            switch (choice) {
+                case 1:
+                    addEmployee();
+                    break;
+                case 2:
+                    viewEmployee();
+                    break;
+                case 3:
+                    updateEmployee();
+                    break;
+                case 4:
+                    calculateSalary();
+                    break;
+                case 5:
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid option. Try again.");
+            }
+        }
+
+        scanner.close();
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void addEmployee() {
+        System.out.print("Enter employee type (Salaried, Hourly, Commission, BasePlusCommission): ");
+        String type = scanner.nextLine();
 
-    public String getId() {
-        return id;
-    }
+        System.out.print("Enter name: ");
+        String name = scanner.nextLine();
 
-    public void setId(String id) {
-        this.id = id;
-    }
+        System.out.print("Enter ID: ");
+        String id = scanner.nextLine();
 
-    public String getType() {
-        return type;
-    }
+        Employee employee = new Employee(name, id, type);
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getAnnualSalary() {
-        return annualSalary;
-    }
-
-    public void setAnnualSalary(double annualSalary) {
-        this.annualSalary = annualSalary;
-    }
-
-    public double getHourlyRate() {
-        return hourlyRate;
-    }
-
-    public void setHourlyRate(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
-
-    public double getHoursWorked() {
-        return hoursWorked;
-    }
-
-    public void setHoursWorked(double hoursWorked) {
-        this.hoursWorked = hoursWorked;
-    }
-
-    public double getSales() {
-        return sales;
-    }
-
-    public void setSales(double sales) {
-        this.sales = sales;
-    }
-
-    public double getCommissionRate() {
-        return commissionRate;
-    }
-
-    public void setCommissionRate(double commissionRate) {
-        this.commissionRate = commissionRate;
-    }
-
-    public double getBaseSalary() {
-        return baseSalary;
-    }
-
-    public void setBaseSalary(double baseSalary) {
-        this.baseSalary = baseSalary;
-    }
-
-    public double calculateSalary() {
         switch (type) {
             case "Salaried":
-                return annualSalary / 12;  // Monthly salary for a salaried employee
+                System.out.print("Enter annual salary: ");
+                double annualSalary = scanner.nextDouble();
+                employee.setAnnualSalary(annualSalary);
+                break;
             case "Hourly":
-                return hourlyRate * hoursWorked;
+                System.out.print("Enter hourly rate: ");
+                double hourlyRate = scanner.nextDouble();
+                System.out.print("Enter hours worked: ");
+                double hoursWorked = scanner.nextDouble();
+                employee.setHourlyRate(hourlyRate);
+                employee.setHoursWorked(hoursWorked);
+                break;
             case "Commission":
-                return sales * commissionRate;
+                System.out.print("Enter sales: ");
+                double sales = scanner.nextDouble();
+                System.out.print("Enter commission rate: ");
+                double commissionRate = scanner.nextDouble();
+                employee.setSales(sales);
+                employee.setCommissionRate(commissionRate);
+                break;
             case "BasePlusCommission":
-                return sales * commissionRate + baseSalary;
+                System.out.print("Enter sales: ");
+                sales = scanner.nextDouble();
+                System.out.print("Enter commission rate: ");
+                commissionRate = scanner.nextDouble();
+                System.out.print("Enter base salary: ");
+                double baseSalary = scanner.nextDouble();
+                employee.setSales(sales);
+                employee.setCommissionRate(commissionRate);
+                employee.setBaseSalary(baseSalary);
+                break;
             default:
-                return 0.0;
+                System.out.println("Invalid employee type.");
+                return;
         }
+
+        employees.add(employee);
+        System.out.println("Employee added successfully.");
     }
 
-    @Override
-    public String toString() {
-        String info = "Name: " + name + ", ID: " + id + ", Type: " + type;
-        switch (type) {
-            case "Salaried":
-                info += ", Annual Salary: " + annualSalary;
-                break;
-            case "Hourly":
-                info += ", Hourly Rate: " + hourlyRate + ", Hours Worked: " + hoursWorked;
-                break;
-            case "Commission":
-                info += ", Sales: " + sales + ", Commission Rate: " + commissionRate;
-                break;
-            case "BasePlusCommission":
-                info += ", Sales: " + sales + ", Commission Rate: " + commissionRate + ", Base Salary: " + baseSalary;
-                break;
+    public void viewEmployee() {
+        System.out.print("Enter employee ID: ");
+        String id = scanner.nextLine();
+
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                System.out.println(employee);
+                return;
+            }
         }
-        return info;
+
+        System.out.println("Employee not found.");
+    }
+
+    public void updateEmployee() {
+        System.out.print("Enter employee ID: ");
+        String id = scanner.nextLine();
+
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                System.out.print("Enter new name: ");
+                employee.setName(scanner.nextLine());
+                System.out.println("Employee info updated.");
+                return;
+            }
+        }
+
+        System.out.println("Employee not found.");
+    }
+
+    public void calculateSalary() {
+        System.out.print("Enter employee ID: ");
+        String id = scanner.nextLine();
+
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                System.out.println("Salary: " + employee.calculateSalary());
+                return;
+            }
+        }
+
+        System.out.println("Employee not found.");
     }
 }

@@ -1,0 +1,35 @@
+```Your IT firm has been given the task of designing 
+ a LMS application. It contains many modules ,but you have 
+been assigned to one module: Designing the StudentGrades class.
+The Specifications for the StudentGrades class are as follows:
+1.There is 1 attribute: an array named grades that contains the grades of student
+as doubles. The minimum 
+value is 0 the maximum can be 100. This attribute is private and needs a getter.
+2. You are to design a constructor that takes in a double array as a parameter and initializes the grades
+attribute.
+
+3. You need to create 4 methods: 8
+a. double averageGrade(): A method that calculates and returns the average of the grades in the
+array as a double.
+b. double maxGrade(): A method that finds and returns the maximum grade in the array as a
+
+ double.
+c. double minGrade(): A method that finds and returns the minimum grade in the array as a double.
+
+= d. void fixGrades(): A method that checks all the grades in the array. If the grade is below 0. it
+
+makes the grade at that position 0.
+e. void displayGrades(: A method that prints all the grades in the array, but not as doubles. For the
+
+following range, it prints the grade letters instead:
+i. If the range is within 0-49, print F
+
+i. If the range is within 50-69, print D
+
+iii. If the range is within 70-79, print Cc
+iv. If the range is within 80-89, print B
+
+v. If the range is within 90-100, print A
+
+Create objects for this case and test out each method.```
+

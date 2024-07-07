@@ -1,0 +1,9 @@
+Declare an array 10, 200,180, 50, 0, 189, 2, 99.Now, write a program that will search a number rom this array and return the index where it is presebnt.Assume that the element is always there in the array.No need to handle the ""Not Found" case.
+
+input
+180
+
+Output
+
+3
+

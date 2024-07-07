@@ -1,0 +1,2 @@
+```Declare an array 10, 200, 180, 50, 0, 189, 2, 99. Now, write a program that calculates the sum of numbers that
+are divisible by 2 and 10. For this example, the answer is 440.```

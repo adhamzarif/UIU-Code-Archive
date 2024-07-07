@@ -1,0 +1,23 @@
+Your IT firm has been given the task of designing a smart home system.It contains many modules,but you 
+have been assigned to one module:designing the temperatureControler class
+
+The specifications for the TemperatureController class are as follows: ;
+1. There is 1 attribute: an array named temperatures that contains the temperatures of the rooms in the
+form of integers. The minimum value is 25, the maximum can be 40. This attribute is private and needs.
+a getter and setter.
+2. You are to design a constructor that takes in a double array as a parameter and initializes the
+temperatures attribute.
+3. You need to create 4 methods:
+
+double averageTemperature(): A method that calculates and returns the average of the
+temperatures in the array as a double.
+
+void findNormalTempRooms(): A method that prints the index positions of the array where the
+temperature is between 27-30.
+
+int maxTemperature(): A method that finds and returns the maximum temperature in the array.
+int minTemperature(): A method that finds and returns the minimum temperature in the array.
+int countAboveThreshold(int threshold): A method that counts and returns the number of
+temperatures above a given threshold as an int.
+
+Create obiects for this case and test out each method.

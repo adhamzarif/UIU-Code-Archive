@@ -1,0 +1,4 @@
+Create an abstract class named Shape that contains two instance variables “dim1” and “dim2”
+of integer type and an abstract method named printArea(). Develop classes named Rectangle,
+Triangle and Circle which will be the subclasses of Shape class. Override the printArea() method
+and prints the area of the given shape

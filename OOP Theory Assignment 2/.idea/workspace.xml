@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f5c1861-410d-420c-80c4-e0f9810d155e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOP Theory Assignment 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem6/Airplane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem6/MyBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem7/CricketWorldCup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem7/Match.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem7/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem8/Output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem8/Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem9/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem9/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem9/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem9/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problem9/Triangle.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2m6ZBqxtjFhkcpdWXkuUxj4dtUo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CricketWorldCup.executor": "Run",
+    "Application.MyBooking.executor": "Run",
+    "Application.Sum.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.cricketWorldCup.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/home/az/Documents/Java/OOP Theory Assignment 2/src/Main.java"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Problem8.Sum" />
+      <module name="OOP Theory Assignment 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Problem8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Problem9.Test" />
+      <module name="OOP Theory Assignment 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Problem9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cricketWorldCup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Problem7.cricketWorldCup" />
+      <module name="OOP Theory Assignment 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Problem7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Sum" />
+        <item itemvalue="Application.cricketWorldCup" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f5c1861-410d-420c-80c4-e0f9810d155e" name="Changes" comment="" />
+      <created>1726398855232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726398855232</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Problem6/MyBooking.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

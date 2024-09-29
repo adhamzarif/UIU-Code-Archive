@@ -1,4 +1,5 @@
 package Problem1;
+import java.util.Scanner;
 
 class Calculator {
     private final int num1, num2;
@@ -15,71 +16,52 @@ class Calculator {
         return num1 + num2;
     }
 
-    int subst() throws ArithmeticException {
+    int subtract() throws ArithmeticException {
         if (num1 < 0 || num2 < 0) {
             throw new ArithmeticException("Negative Number Found in subs");
         }
         return num1 - num2;
     }
 
+    int multiply() throws ArithmeticException {
+        if (num1 == 0 || num2 == 0) {
+            throw new ArithmeticException("Zero Found in multiply");
+        }
+        return num1 * num2;
+    }
+
     int division() throws ArithmeticException {
-        if (num1 < 0 || num2 == 0) {
-            throw new ArithmeticException("Number 2 is 0 or negative in Div");
+        if (num2 == 0) {
+            throw new ArithmeticException("Division by zero");
         }
         return num1 / num2;
-    }
-
-    int mult() throws ArithmeticException {
-        if (num1 < 0 || num2 == 0) {
-            throw new ArithmeticException("Negative Number or 0 Found in Mult");
-        }
-        return num1 * num2;  // Corrected to multiplication
-    }
-
-    String msg() throws NumberFormatException {
-        if (num1 >= 1 || num2 >= 1) {
-            return "Valid Number";
-        }
-        throw new NumberFormatException("Invalid Number Format");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            Calculator c = new Calculator(10, 10);
-            System.out.println("Add: " + c.add());
-        } catch (ArithmeticException a) {
-            System.out.println("Exception Found: " + a.getMessage());
-        }
+        Scanner sc = new Scanner(System.in);
 
         try {
-            Calculator d = new Calculator(10, 10);
-            System.out.println("Subs: " + d.subst());
-        } catch (ArithmeticException b) {
-            System.out.println("Exception Found: " + b.getMessage());
-        }
 
-        try {
-            Calculator e = new Calculator(10, 10);
-            System.out.println("Mult: " + e.mult());
-        } catch (ArithmeticException c) {
-            System.out.println("Exception Found: " + c.getMessage());
-        }
+            Calculator obj1 = new Calculator(10, 20);
+            System.out.println("Addition result: " + obj1.add());
 
-        try {
-            Calculator f = new Calculator(10, 0);
-            System.out.println("Div: " + f.division());
-        } catch (ArithmeticException d) {
-            System.out.println("Exception Found: " + d.getMessage());
-        }
+            Calculator obj2 = new Calculator(10, 20);
+            System.out.println("Subtraction result: " + obj2.subtract());
 
-        // Example for message method
-        try {
-            Calculator g = new Calculator(1, 2);  // Passing valid numbers
-            System.out.println("Message: " + g.msg());
+
+            Calculator obj3 = new Calculator(10, 20);
+            System.out.println("Multiplication result: " + obj3.multiply());
+
+
+            Calculator obj4 = new Calculator(10, 20);
+            System.out.println("Division result: " + obj4.division());
+
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException Found: " + e.getMessage());
         } catch (NumberFormatException e) {
-            System.out.println("Exception Found: " + e.getMessage());
+            System.out.println("NumberFormatException: Invalid input, please enter integers only.");
         }
     }
 }

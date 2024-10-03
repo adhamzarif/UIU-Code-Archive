@@ -55,9 +55,7 @@ public class DemoGui extends JFrame {
         setSize(800, 600);
         setLocationRelativeTo(null);
         setContentPane(mainPanel);
-
         quantityField.setText("0");
-
         products.add(new Product("Rice", 123, 100));
         products.add(new Product("Sugar", 456, 150));
         products.add(new Product("Salt", 789, 200));
@@ -66,7 +64,6 @@ public class DemoGui extends JFrame {
             productListModel.addElement("Name: " + p.name + " | Price: " + p.price + " | Stock: " + p.stock);
         }
         list1.setModel(productListModel);
-
         list1.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent me) {
                 if (me.getClickCount() == 1) {
@@ -78,7 +75,6 @@ public class DemoGui extends JFrame {
                 }
             }
         });
-
         decrementButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -91,7 +87,6 @@ public class DemoGui extends JFrame {
                 }
             }
         });
-
         incrementButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -102,7 +97,6 @@ public class DemoGui extends JFrame {
                 }
             }
         });
-
         addToCartButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (selectedProductIndex != -1) {
@@ -114,7 +108,6 @@ public class DemoGui extends JFrame {
                         JOptionPane.showMessageDialog(DemoGui.this, "Please enter a valid quantity.");
                         return;
                     }
-
                     if (selectedQuantity > selectedProduct.stock) {
                         JOptionPane.showMessageDialog(DemoGui.this, "Not enough stock available!");
                     } else {
@@ -130,7 +123,6 @@ public class DemoGui extends JFrame {
                             CartItem newItem = new CartItem(selectedProduct, selectedQuantity);
                             cart.add(newItem);
                         }
-
                         updateCartList();
                         selectedProduct.stock -= selectedQuantity;
                         productListModel.set(selectedProductIndex, "Name: " + selectedProduct.name + " | Price: " + selectedProduct.price + " | Stock: " + selectedProduct.stock);
@@ -140,24 +132,24 @@ public class DemoGui extends JFrame {
                 }
             }
         });
-
         deleteButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                int selectedCartIndex = cartList.getSelectedIndex();
-                if (selectedCartIndex != -1) {
-                    CartItem selectedCartItem = cart.get(selectedCartIndex);
-                    Product product = selectedCartItem.product;
-                    product.stock += selectedCartItem.quantity;
-
-                    cart.remove(selectedCartIndex);
+                int selectedProductIndex = list1.getSelectedIndex();
+                if (selectedProductIndex != -1) {
+                    Product selectedProduct = products.get(selectedProductIndex);
+                    products.remove(selectedProductIndex);
+                    productListModel.remove(selectedProductIndex);
+                    for (int i = cart.size() - 1; i >= 0; i--) {
+                        if (cart.get(i).product.equals(selectedProduct)) {
+                            cart.remove(i);
+                        }
+                    }
                     updateCartList();
-                    productListModel.set(products.indexOf(product), "Name: " + product.name + " | Price: " + product.price + " | Stock: " + product.stock);
                 } else {
-                    JOptionPane.showMessageDialog(DemoGui.this, "Please select an item from cart to delete.");
+                    JOptionPane.showMessageDialog(DemoGui.this, "Please select a product to delete.");
                 }
             }
         });
-
         checkoutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String summary = "";
@@ -174,10 +166,8 @@ public class DemoGui extends JFrame {
                 totalAmountLabel.setText("Total Items: " + totalItems + " | Total Amount: " + totalAmount);
             }
         });
-
         setVisible(true);
     }
-
     private void updateCartList() {
         cartListModel.clear();
         for (CartItem item : cart) {
@@ -185,7 +175,6 @@ public class DemoGui extends JFrame {
         }
         cartList.setModel(cartListModel);
     }
-
     public static void main(String[] args) {
         new DemoGui();
     }

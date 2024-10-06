@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CheckBoxToggleApp {
+public class Q1_CheckBoxToggleApp {
     public static void main(String[] args) {
         // Create a JFrame window
         JFrame frame = new JFrame("CheckBox Toggle Example");

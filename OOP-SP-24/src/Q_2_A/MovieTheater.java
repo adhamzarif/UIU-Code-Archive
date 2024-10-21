@@ -1,17 +1,16 @@
 package Q_2_A;
 
-public class MovieTheater {
+class MovieTheater {
     int availableSeats;
 
     MovieTheater(int s) {
         availableSeats = s;
     }
 
-    public synchronized int bookTickets(int numOfSeats) {
+    public synchronized int bookTickets(int numOFseats) {
         int numOfTicketsBooked = 0;
-
-        // Booking tickets one by one
-        for (int i = 1; i <= numOfSeats; i++) {
+       
+        for (int i = 1; i <= numOFseats; i++) {
             if (availableSeats > 0) {
                 availableSeats--;
                 numOfTicketsBooked++;
@@ -19,31 +18,29 @@ public class MovieTheater {
         }
         return numOfTicketsBooked;
     }
+}
 
-    class User extends Thread {
-        MovieTheater m;
-        int numOfTickets;
+class User extends Thread {
+    MovieTheater m;
+    int NumOfTickets;
 
-        User(MovieTheater m, int numOfTickets, String name) {
-            super(name);
-            this.m = m;
-            this.numOfTickets = numOfTickets;
-        }
-
-        @Override
-        public void run() {
-            int booked = m.bookTickets(numOfTickets);
-            System.out.println(Thread.currentThread().getName() + " has booked " + booked + " tickets");
-        }
+    User(MovieTheater m, int n) {
+        this.m = m;
+        NumOfTickets = n;
     }
 
+    public void run() {
+        m.bookTickets(NumOfTickets);
+    }
+}
+
+class Movie {
     public static void main(String[] args) {
+        MovieTheater m = new MovieTheater(15);
 
-        MovieTheater theater = new MovieTheater(15);
-
-        User mina = theater.new User(theater, 6, "Mina");
-        User nabil = theater.new User(theater, 8, "Nabil");
-        User farhan = theater.new User(theater, 4, "Farhan");
+        User mina = new User(m, 6);
+        User nabil = new User(m, 8);
+        User farhan = new User(m, 4);
 
         mina.start();
         nabil.start();
@@ -54,10 +51,9 @@ public class MovieTheater {
             nabil.join();
             farhan.join();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println(m.availableSeats);
         }
-
-        System.out.println("Available tickets: " + theater.availableSeats);
     }
 }
-

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.class_3.HelloController">
+   <children>
+      <Circle fx:id="c" fill="DODGERBLUE" layoutX="119.0" layoutY="111.0" radius="49.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="406.0" layoutY="98.0" mnemonicParsing="false" onAction="#moveUp" text="Up" />
+      <Button layoutX="459.0" layoutY="98.0" mnemonicParsing="false" onAction="#moveDown" text="Down" />
+      <Button layoutX="459.0" layoutY="132.0" mnemonicParsing="false" onAction="#moveRIGHT" text="Right" />
+      <Button layoutX="404.0" layoutY="132.0" mnemonicParsing="false" onAction="#moveLEFT" text="Left" />
+      <Button layoutX="396.0" layoutY="175.0" mnemonicParsing="false" onAction="#zoomIN" text="Zoom In" />
+      <Button layoutX="475.0" layoutY="175.0" mnemonicParsing="false" onAction="#zoomOUT" text="Zoom Out" />
+      <Button layoutX="274.0" layoutY="259.0" mnemonicParsing="false" onAction="#sceneChange" text="Change Scene" />
+   </children>
+</AnchorPane>
